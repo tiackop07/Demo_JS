@@ -10,5 +10,21 @@ function result() {
     let result = monney + interest;
     document.getElementById("output").innerHTML = result;
 }
+// dử dụng alert
+// function showMessage(message) {
+//     alert("xin chào");
+// }
 
+// sửu dụng inerHTML
+// function showMessage(){
+//     document.getElementById("messageDiv").innerHTML = 'Xin chào';
+// }
+//  sử dụng document.write
+// function showMessage(){
+//     document.write('xin chào');
+// }
+// Sử dụng console.log
+function showMessage(){
+    console.log('Xin chào!');
+}
 
