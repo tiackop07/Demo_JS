@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Computer</title>
+    <style>
+        table {
+            width: 100px;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        input {
+            text-align: right;
+            border: 1px solid black;
+            width: 200px;
+            height: 30px;
+        }
+        button{
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Computer</h1>
+    <input id="showCalculator">
+    <br>
+    <br>
+    <div>
+    <table>
+        <tr>
+            <td>
+                <button onclick="setOutput('1')">1</button>
+            </td>
+            <td>
+                <button onclick="setOutput('2')">2</button>
+            </td>
+            <td>
+                <button onclick="setOutput('3')">3</button>
+            </td>
+            <td>
+                <button onclick="setOutput('+')">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="setOutput('4')">4</button>
+            </td>
+            <td>
+                <button onclick="setOutput('5')">5</button>
+            </td>
+            <td>
+                <button onclick="setOutput('6')">6</button>
+            </td>
+            <td>
+                <button onclick="setOutput('-')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="setOutput('7')">7</button>
+            </td>
+            <td>
+                <button onclick="setOutput('8')">8</button>
+            </td>
+            <td>
+                <button onclick="setOutput('9')">9</button>
+            </td>
+            <td>
+                <button onclick="setOutput('*')">x</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="setDelete('C')">C</button>
+            </td>
+            <td>
+                <button onclick="setOutput('0')">0</button>
+            </td>
+            <td>
+                <button onclick="result()">=</button>
+            </td>
+            <td>
+                <button onclick="setOutput('/')">/</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+<script>
+    function setOutput(value){
+        document.getElementById("showCalculator").value += value;
+    }
+
+    function result(){
+        let input = document.getElementById("showCalculator").value;
+        document.getElementById("showCalculator").value = eval(input);
+    }
+
+    function setDelete(value){
+        document.getElementById("showCalculator").value = "";
+    }
+</script>
+
+</body>
+</html>

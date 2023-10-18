@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Số tiền tiêu thụ</h1>
+<table>
+  <tr>
+    <th>Số điện tiêu thụ</th>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input id="number"></td>
+    <td>
+      <button onclick="getMonney()">Tính Tiền</button>
+    </td>
+  </tr>
+</table>
+<h2 id="result"></h2>
+
+<script>
+  function getMonney() {
+    let numberC = +document.getElementById("number").value;
+    let rank;
+    if (numberC <= 50){
+      rank = numberC * 800;
+    } else if (numberC <= 100) {
+      rank = numberC * 1000;
+    } else if (numberC <= 200) {
+      rank = numberC * 1500;
+    } else {
+      rank = numberC * 2000;
+    }
+    document.getElementById("result").innerHTML = "Số tiền phải trả là: " + rank.toLocaleString() + " VND";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài demo</title>
+</head>
+<body>
+<h1>Xếp loại</h1>
+<table>
+  <tr>
+    <th>Điểm kỳ 1</th>
+    <th>Điểm kỳ 2</th>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input id="dk2"></td>
+    <td><input id="dk1"></td>
+    <td>
+      <button onclick="result()" style="background: cyan">Xếp hạng học sinh</button>
+    </td>
+  </tr>
+</table>
+<p id="result"></p>
+
+<script>
+  function result() {
+    let a = +document.getElementById("dk1").value;
+    let b = +document.getElementById("dk2").value;
+
+
+    if (a == null || b == null) {
+      document.getElementById("result").innerHTML = "Thiếu dữ liệu đầu vào"
+    } else {
+      let c = (a + b) / 2;
+      let d = ""
+      if (c >= 8.5) {
+        d = "Xếp hạng Giỏi";
+      } else if (c > 7 && c < 8.5) {
+        d = "Xếp hạng Khá"
+      } else if (c >= 5 && c <= 7) {
+        d = "Xếp hạng Trung Bình";
+      } else {
+        d = "Xếp hạng Yếu"
+      }
+      document.getElementById("result").innerHTML = d;
+    }
+  }
+
+
+
+
+</script>
+
+</body>
+</html>

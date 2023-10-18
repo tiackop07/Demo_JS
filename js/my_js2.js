@@ -38,20 +38,20 @@
 
 //Bài chuyển đổi tiền tệ
 
-function ChangeMoney() {
+function Convert() {
     let Amount = document.getElementById("Amount").value;
-    let FromC = document.getElementById("From").value;
+    let From = document.getElementById("From").value;
     let To = document.getElementById("To").value;
     let Result;
 
 
-    if (FromC == "USD" && To == "VND") {
+    if (From == "USD" && To == "VND") {
         Result = "Result: " + (Amount * 23000) + " Đ";
     }
-    else if (FromC == "VND"&& To =="USD"){
+    else if (From == "VND"&& To =="USD"){
         Result = "Result: "+ (Amount / 23000) + " $";
     }
-    else if (FromC == "VND") {
+    else if (From == "VND") {
         Result = "Result: " + Amount + " Đ"
     } else {
         Result = "Result: " + Amount + " $"

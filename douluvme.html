@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoULuvMe</title>
+  <style>
+    #btnNo{
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do U Luv Me <3</h1>
+  <table>
+    <th>
+      <button id="btnYes" onclick="sheSayYes()">Yes</button>
+    </th>
+    <th>
+      <button id="btnNo" onmouseover="hoverNoButton()">No</button>
+    </th>
+  </table>
+
+<script>
+  function hoverNoButton(){
+    let noBtn = document.getElementById("btnNo");
+    noBtn.style.top = Math.random() * 500 + "px";
+    noBtn.style.left = Math.random() * 500 + "px";
+  }
+
+  function sheSayYes() {
+    alert("Yeah...")
+  }
+</script>
+</body>
+</html>
