@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Năm nhuận</h1>
+    <p>Nhập số năm: <input id="leafYear" placeholder="Nhập số năm"></p>
+    <button onclick="check()">check</button>
+
+<script>
+    function check() {
+        let lYear = +document.getElementById("leafYear").value;
+
+        if (lYear % 4 == 0) {
+            if (lYear % 100 == 0) {
+                if (lYear % 400 == 0) {
+                    alert(lYear  +" là năm nhuận");
+                }else {
+                    alert(lYear  +" ko là năm nhuận");
+                }
+            }else {
+                alert( lYear  +" là năm nhuận")
+            }
+        }else {
+            alert(lYear  +" ko là năm nhuận");
+        }
+    }
+</script>
+</body>
+</html>

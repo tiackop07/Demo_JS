@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Học Thôi</title>
+</head>
+<body>
+
+<!--  <h1> Tìm số lớn nhất</h1>-->
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <td>Số 1 :</td>-->
+<!--      <td><input id="number1" type="number" placeholder="Nhập số thứ 1"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Số 2 :</td>-->
+<!--      <td><input id="number2" type="number" placeholder="Nhập số thứ 2"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Số 3 :</td>-->
+<!--      <td><input id="number3" type="number" placeholder="Nhập số thứ 3"></td>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--  <p>-->
+<!--    <button onclick="check()">Check</button>-->
+<!--  </p>-->
+<!--  <p id="result"></p>-->
+
+
+<!--  Bài tìm số chia hết cho 5-->
+<p>Nhập số: <input id="inputN"  placeholder="Nhấp số"></p>
+<p>
+  <button onclick="result()">Check</button>
+</p>
+
+
+  <script>
+<!--    bài tìm số lớn nhất-->
+    // function check() {
+    //   let a = +document.getElementById("number1").value;
+    //   let b = +document.getElementById("number2").value;
+    //   let c = +document.getElementById("number3").value;
+    //   let resultE = "";
+    //
+    //   if (a > b) {
+    //     if (a < c) {
+    //       resultE = "Số lớn nhất là " + c;
+    //     } else {
+    //       resultE = "Số lớn nhất là " + a;
+    //     }
+    //   }else {
+    //     if (b < c) {
+    //       resultE = "Số lớn nhất là " + c;
+    //     } else {
+    //       resultE = "Số lớn nhất là " +b;
+    //     }
+    //   }
+    //   document.getElementById("result").innerHTML = resultE;
+    // }
+    // bài tìm số chia hết cho 5
+    function result() {
+      let input = +document.getElementById("inputN").value;
+
+      if (input != "") {
+        input = parseInt(input);
+        if (input % 5 == 0) {
+          alert("Số này chia hết cho 5");
+        } else {
+          alert("Số này ko chia hết cho 5");
+        }
+      } else {
+        alert("Bạn nhập thiếu thông tin")
+      }
+    }
+  </script>
+</body>
+</html>
